@@ -5,8 +5,8 @@ services:
     plan: free
     region: frankfurt
     dockerfilePath: ./Dockerfile
-    containerPort: 3000          # Render deja de escanear
+    containerPort: 3000        # 👈 Render ya no escanea
     envVars:
-      - key: PORT                # <-- crítico
+      - key: PORT              # 👈 Render inyecta 3000
         value: "3000"
     healthCheckPath: /api/health
