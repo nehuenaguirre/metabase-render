@@ -1,8 +1,8 @@
 services:
   - type: web
-    name: metabase
     env:  docker
+    name: metabase
     plan: free
     dockerfilePath: ./Dockerfile
-    containerPort: 3000        
+    # Si quieres que Render se base sólo en PORT, omite containerPort.
     healthCheckPath: /api/health
