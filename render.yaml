@@ -4,5 +4,5 @@ services:
     name: metabase
     plan: free
     dockerfilePath: ./Dockerfile
-    # Si quieres que Render se base sólo en PORT, omite containerPort.
+    containerPort: 3000        # ← clave: Render mapea 3000 y NO escanea
     healthCheckPath: /api/health
