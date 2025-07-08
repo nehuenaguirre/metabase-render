@@ -1,8 +1,12 @@
 services:
   - type: web
-    env:  docker
     name: metabase
+    env:  docker
     plan: free
+    region: frankfurt
     dockerfilePath: ./Dockerfile
-    containerPort: 3000        # ← clave: Render mapea 3000 y NO escanea
+    containerPort: 3000          # Render deja de escanear
+    envVars:
+      - key: PORT                # <-- crítico
+        value: "3000"
     healthCheckPath: /api/health
