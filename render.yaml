@@ -1,9 +1,8 @@
 services:
   - type: web
-    env:  docker
     name: metabase
+    env:  docker
     plan: free
     dockerfilePath: ./Dockerfile
-    containerPort: 3000      # Render sabrá que tu contenedor escucha aquí
+    containerPort: 3000        
     healthCheckPath: /api/health
-
